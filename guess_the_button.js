@@ -1,12 +1,13 @@
+let is_the_winner
 function Button() {
-	return Math.floor(Math.random() * 3 + 1)
+	is_the_winner =  Math.floor(Math.random() * 3 + 1)
+	alert(is_the_winner)	
 }
 
-function fiftyFifty(attempt) {
-	let selectButton = Button()
-	if (attempt === selectButton) {
-		document.getElementById(attempt).innerHTML="You won"
+function fiftyFifty(nrOrd, attempt) {
+	if (nrOrd === attempt) {
+		document.getElementById(nrOrd).innerHTML = "You won"
 	} else {
-		document.getElementById(attempt).innerHTML="You lose"
+		document.getElementById(nrOrd).innerHTML = "You lose"
 	}
-}
+}	
